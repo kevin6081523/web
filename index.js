@@ -108,3 +108,9 @@ const logoutController = require('./controllers/logout')
 app.get('/auth/logout',logoutController)
 app.use((req,res)=>res.render('notfound'));
 
+
+process.on('unhandledRejection', error => {
+    console.error('unhandledRejection', error);
+    process.exit(1) // To exit with a 'failure' code
+  });
+  
