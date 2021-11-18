@@ -90,10 +90,12 @@ app.get('/',async(req,res)=>{
 // app.listen(4000,()=>{
 //     console.log('App listening 4000')
 // })
+
 let port = process.env.PORT
 if(port==null || port==""){
     port=4000
 }
+
 app.listen(port,()=>{
     console.log('App listening...')
 })
