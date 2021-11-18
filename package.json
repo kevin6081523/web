@@ -9,7 +9,7 @@
   "author": "Start Bootstrap",
   "license": "MIT",
   "engines": {
-    "node": "10.15.3"
+    "node": "10.24.1"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
