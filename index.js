@@ -20,7 +20,9 @@ app.set('view engine','ejs')
 
 app.use(fileUpload())
 app.use(expressSession({
-    secret:'keyboard cat'
+    secret:'keyboard cat',
+    resave: true,
+    saveUninitialized: true
 }))
 
 global.loggedIn = null;
