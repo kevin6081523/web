@@ -4,10 +4,10 @@ const app =new express()
 const ejs =require('ejs')
 const flash =require('connect-flash')
 const mongoose = require('mongoose')
+
+mongoose.connect('mongodb+srv://mydatabase:point4197@cluster0.vzrfy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',{useNewUrlParser:true})
 const BlogPost = require('./models/BlogPost')
 const User = require('./models/User')
-mongoose.connect('mongodb://localhost/my_database',{useNewUrlparser:true
-})
 const expressSession = require('express-session')
 app.use(flash())
 app.use(express.static('public'))
