@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "author": "Start Bootstrap",
   "license": "MIT",
@@ -12,6 +12,7 @@
     "node": "10.24.1"
   },
   "dependencies": {
+    "alert": "^5.0.10",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "bootstrap": "4.5.3",

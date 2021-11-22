@@ -7,12 +7,12 @@ const UserSchema = new Schema({
     username:{
         type:String,
         required:[true,'Please provide username'],
-        unique:true
+        unique:[true,"帳號已註冊"],
     },
     password: {
         type:String,
         required:[true,'Please provide password']
-    }
+    },
 });
 
 UserSchema.plugin(uniqueValidator)

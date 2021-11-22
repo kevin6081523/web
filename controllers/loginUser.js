@@ -3,8 +3,6 @@ const User = require('../models/User')
 
 module.exports = (req,res) =>{
     const { username,password } = req.body
-    
-    
     User.findOne({username: username},function(error,user){        
         if(user){
             bcrypt.compare(password, user.password, (error,same)=>{
@@ -13,12 +11,13 @@ module.exports = (req,res) =>{
                     res.redirect('/')
                 }
                 else{
+                    req.flash('data',req.body)
                     res.redirect('/auth/login')
                 }
             })
         }
         else{
-            console.log("/auth/login::",user)
+            console.log("/auth/login:",user)
             res.redirect('/auth/login')
         }
     })
